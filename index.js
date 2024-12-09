@@ -1,6 +1,6 @@
 let employees = [];
 
-fetch("http://localhost:3000/employees")
+fetch("https://employees-rugo.onrender.com/employees")
   .then((response) => response.json())
   .then((json) =>
     json.forEach((employee) => {
