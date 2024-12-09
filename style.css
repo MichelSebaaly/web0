@@ -1,0 +1,11 @@
+#employees {
+  margin-top: 10px;
+  border: 1px solid black;
+}
+#employees th {
+  border: 1px solid black;
+}
+#employees td {
+  border: 1px solid black;
+  padding: 5px;
+}
