@@ -1,10 +1,18 @@
 let employees = [];
-
+let grades = [];
 fetch("https://employees-rugo.onrender.com/employees")
   .then((response) => response.json())
   .then((json) =>
     json.forEach((employee) => {
       employees.push(employee);
+    })
+  );
+
+fetch("https://employees-rugo.onrender.com/grades")
+  .then((response) => response.json())
+  .then((json) =>
+    json.forEach((student) => {
+      grades.push(student);
     })
   );
 
@@ -18,5 +26,13 @@ function displayEmployees() {
       tableRow.appendChild(tableData);
     });
     tableEmployees.appendChild(tableRow);
+  });
+}
+function displayGrades() {
+  let gradesList = document.getElementById("gradesList");
+  grades.forEach((grade) => {
+    let eachGrade = document.createElement("li");
+    eachGrade.innerHTML = grade.Name + ": " + grade.Grade;
+    gradesList.appendChild(eachGrade);
   });
 }
