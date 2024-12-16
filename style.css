@@ -3,6 +3,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-content: center;
 }
 
 #employees {
@@ -28,4 +29,14 @@ body {
 }
 .btn:hover {
   background-color: aqua;
+}
+
+#gradesList {
+  list-style-type: none;
+}
+#gradesList li {
+  border: 1px solid black;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: yellow;
 }
