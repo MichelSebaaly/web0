@@ -32,7 +32,12 @@ function displayGrades() {
   let gradesList = document.getElementById("gradesList");
   grades.forEach((grade) => {
     let eachGrade = document.createElement("li");
-    eachGrade.innerHTML = grade.Name + ": " + grade.Grade;
+    eachGrade.innerHTML =
+      grade.Name +
+      ": " +
+      (grade.Grade > 60
+        ? grade.Grade + " Congrats"
+        : grade.Grade + " bad luck");
     gradesList.appendChild(eachGrade);
   });
 }
